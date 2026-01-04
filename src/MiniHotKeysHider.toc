@@ -5,5 +5,6 @@
 ## Version: 1.0.0
 ## IconTexture: Interface\AddOns\MiniHotKeysHider\icon.blp
 ## SavedVariablesPerCharacter: MiniHotKeysHiderDB
+## X-Curse-Project-ID: 1419310
 
 MiniHotKeysHider.lua
