@@ -1,4 +1,5 @@
 local addonName = ...
+local didWeHide = false
 local db
 
 local function ApplyAlpha(frame, alpha)
@@ -11,6 +12,11 @@ end
 
 local function ShowHideHotkeys(show)
 	local hotKeyAlpha = show and 1 or 0
+
+	-- avoid touching if we didn't do anything
+	if show and not didWeHide then
+		return
+	end
 
 	for i = 1, 12 do
 		ApplyAlpha(_G["ActionButton" .. i .. "HotKey"], hotKeyAlpha)
@@ -33,6 +39,8 @@ local function ShowHideHotkeys(show)
 		ApplyAlpha(_G["MultiBar7Button" .. i .. "Name"], hotKeyAlpha)
 		ApplyAlpha(_G["PetActionButton" .. i .. "Name"], hotKeyAlpha)
 	end
+
+	didWeHide = not show
 end
 
 local function Run()
