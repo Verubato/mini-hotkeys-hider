@@ -3,7 +3,7 @@
 ## Notes: Hides the hotkeys text on your action bars for a cleaner look.
 ## Author: Verz
 ## Version: 1.0.1
-## IconTexture: Interface\AddOns\MiniHotKeysHider\icon.blp
+## IconTexture: Interface\AddOns\MiniHotKeysHider\Icon.blp
 ## SavedVariablesPerCharacter: MiniHotKeysHiderDB
 ## X-Curse-Project-ID: 1419310
 
