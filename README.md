@@ -8,9 +8,9 @@ Once you've got used to your hotkeys it looks a lot nicer to hide the text on ac
 
 ## Screenshots
 
-![MiniHotKeysHider screenshot](https://raw.githubusercontent.com/Verubato/mini-hotkeys-hider/main/assets/After.png)
+![MiniHotKeysHider screenshot](https://raw.githubusercontent.com/Verubato/mini-hotkeys-hider/main/assets/Screenshots/After.png)
 
-![MiniHotKeysHider screenshot](https://raw.githubusercontent.com/Verubato/mini-hotkeys-hider/main/assets/Before.png)
+![MiniHotKeysHider screenshot](https://raw.githubusercontent.com/Verubato/mini-hotkeys-hider/main/assets/Screenshots/Before.png)
 
 ## Download
 
