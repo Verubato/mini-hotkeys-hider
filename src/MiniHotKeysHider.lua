@@ -77,7 +77,8 @@ local function InitUI()
 
 	local checkbox = mini:Checkbox({
 		Parent = panel,
-		LabelText = "Hide HotKeys",
+		LabelText = "Hide Character HotKeys",
+		Tooltip = "Hides this character's hotkeys.",
 		GetValue = function()
 			return db.Enabled
 		end,
