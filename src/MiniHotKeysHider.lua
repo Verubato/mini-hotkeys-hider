@@ -72,6 +72,7 @@ local function InitUI()
 	local header = mini:PanelHeader({
 		Parent = panel,
 		Description = "Hide your action bar hotkeys for a cleaner look",
+		Divider = true,
 	})
 
 	local checkbox = mini:Checkbox({
