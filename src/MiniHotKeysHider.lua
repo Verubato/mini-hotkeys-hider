@@ -1,4 +1,6 @@
-local addonName = ...
+local addonName, addon = ...
+---@type MiniFramework
+local mini = addon.Framework
 local didWeHide = false
 local db
 
@@ -54,49 +56,36 @@ local function OnEvent()
 	C_Timer.After(0, Run)
 end
 
-local function AddCategory(panel)
-	if Settings then
-		local category = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
-		Settings.RegisterAddOnCategory(category)
-
-		return category
-	elseif InterfaceOptions_AddCategory then
-		InterfaceOptions_AddCategory(panel)
-
-		return panel
-	end
-
-	return nil
-end
-
 local function InitUI()
+	-- A styled button clashes with the stock Blizzard art around it in the settings screen.
+	mini:SetCustomStyling(true, { Button = false })
+
 	local panel = CreateFrame("Frame")
 	panel.name = addonName
 
-	local category = AddCategory(panel)
+	local category = mini:AddCategory(panel)
 
 	if not category then
 		return
 	end
 
-	local version = C_AddOns.GetAddOnMetadata(addonName, "Version")
-	local title = panel:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
-	title:SetPoint("TOPLEFT", 0, -16)
-	title:SetText(string.format("%s - %s", addonName, version))
+	local header = mini:PanelHeader({
+		Parent = panel,
+		Description = "Hide your action bar hotkeys for a cleaner look",
+	})
 
-	local description = panel:CreateFontString(nil, "ARTWORK", "GameFontWhite")
-	description:SetPoint("TOPLEFT", title, 0, -25)
-	description:SetText("Hide your action bar hotkeys for a cleaner look")
-
-	local checkbox = CreateFrame("CheckButton", nil, panel, "UICheckButtonTemplate")
-	checkbox:SetPoint("TOPLEFT", description, 0, -20)
-	checkbox.Text:SetText("Hide HotKeys")
-	checkbox.Text:SetFontObject("GameFontNormal")
-	checkbox:SetChecked(db.Enabled or false)
-	checkbox:SetScript("OnClick", function()
-		db.Enabled = checkbox:GetChecked()
-		Run()
-	end)
+	local checkbox = mini:Checkbox({
+		Parent = panel,
+		LabelText = "Hide HotKeys",
+		GetValue = function()
+			return db.Enabled
+		end,
+		SetValue = function(value)
+			db.Enabled = value
+			Run()
+		end,
+	})
+	checkbox:SetPoint("TOPLEFT", header.Anchor, "BOTTOMLEFT", 0, -mini.VerticalSpacing)
 end
 
 local function Init()

@@ -8,4 +8,5 @@
 ## SavedVariablesPerCharacter: MiniHotKeysHiderDB
 ## X-Curse-Project-ID: 1419310
 
+Libs\MiniFramework\MiniFramework.xml
 MiniHotKeysHider.lua
