@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.7
+
+UI improvements.
+
 ## 1.1.6
 
 Added a Mini category so the addon groups with the other Mini addons in the addon list.

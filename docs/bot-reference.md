@@ -1,6 +1,6 @@
 # MiniHotKeysHider - bot reference
 
-Version 1.1.5. Interface versions: 120100, 50504, 40402, 38002, 38000,
+Version 1.1.7. Interface versions: 120100, 50504, 40402, 38002, 38000,
 30405, 30300, 20506, 11509 (retail plus the classic client lines). Saved
 variables: MiniHotKeysHiderDB (per character).
 
@@ -28,7 +28,7 @@ Options -> AddOns -> MiniHotKeysHider. There are no slash commands.
 
 | Setting | Type | Default | Effect |
 |---|---|---|---|
-| Hide HotKeys | checkbox | on | Hides hotkey and macro name text on the default action bars. Applies immediately on click. |
+| Hide Character HotKeys | checkbox | on | Hides hotkey and macro name text on the default action bars for this character. Applies immediately on click. |
 
 The setting is saved per character.
 
