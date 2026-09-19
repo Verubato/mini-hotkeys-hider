@@ -1,6 +1,6 @@
 # MiniHotKeysHider - bot reference
 
-Version 1.1.7. Interface versions: 120100, 16001, 50504, 40402, 38002, 38000,
+Version 1.1.8. Interface versions: 120100, 16001, 50504, 40402, 38002, 38000,
 30405, 30300, 20506, 11509 (retail plus the classic client lines). Saved
 variables: MiniHotKeysHiderDB (per character).
 
