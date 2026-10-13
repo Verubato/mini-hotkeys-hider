@@ -1,9 +1,9 @@
-## Interface: 120100, 16001, 50504, 40402, 38002, 38000, 30405, 30300, 20506, 11509
+## Interface: 120105, 120100, 16001, 50504, 40402, 38002, 38000, 30405, 30300, 20506, 11509
 ## Title: MiniHotKeysHider
 ## Notes: Hides the hotkeys text on your action bars for a cleaner look.
 ## Category: Mini
 ## Author: Verz
-## Version: 1.1.8
+## Version: 1.1.9
 ## IconTexture: Interface\AddOns\MiniHotKeysHider\Icon.blp
 ## SavedVariablesPerCharacter: MiniHotKeysHiderDB
 ## X-Curse-Project-ID: 1419310
